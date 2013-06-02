@@ -257,6 +257,17 @@ module.exports = function (grunt) {
           ]
         }]
       }
+    },
+    compress: {
+      app: {
+        options: {
+          archive: 'app.zip',
+          level: 9
+        },
+        files: [
+          {cwd: '<%= yeoman.dist %>', src: ['**'], expand: true}
+        ]
+      }
     }
   });
 
@@ -296,7 +307,8 @@ module.exports = function (grunt) {
     'ngmin',
     'uglify',
     'rev',
-    'usemin'
+    'usemin',
+    'compress'
   ]);
 
   grunt.registerTask('default', ['build']);
