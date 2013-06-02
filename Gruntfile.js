@@ -264,6 +264,18 @@ module.exports = function (grunt) {
           {cwd: '<%= yeoman.dist %>', src: ['**'], expand: true}
         ]
       }
+    },
+    'phonegap-build': {
+      app: {
+        options: {
+          archive: 'app.zip',
+          appId: '424019',
+          user: {
+            token: '',
+          },
+          timeout: 30
+        }
+      }
     }
   });
 
