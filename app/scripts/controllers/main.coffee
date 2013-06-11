@@ -5,5 +5,8 @@ angular.module('pgAFooApp')
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
-      'Karma'
+      'Karma',
     ]
+    document.addEventListener 'deviceready', () ->
+      $scope.awesomeThings.push 'Fabian!'
+      $scope.$apply()
